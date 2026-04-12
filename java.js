@@ -1,26 +1,25 @@
-let a1=0,a2=0;
 function playerInput(){
-    let nm=prompt(`Enter your name, Player: `);
-    let sm=prompt(`Enter your Symbol(X or O), Player: `);
-    return {nm,sm}
+    let nm=prompt(`Enter your name, Player: `);
+    let sm=prompt(`Enter your Symbol(X or O), Player: `);
+    return {nm,sm}
 }
 const mom = (function () {
-    let matrix
-    function createGameboard(){//Creating a gameboard
-        const rows = 3;
-        const cols = 3;
-        matrix = Array.from({ length: rows }, () => Array(cols).fill(0));
-        return { matrix,rows };
-    }
-    function gameController(player,i,j) {
-        const {sm}=player;
-        matrix[i][j]=sm;
-    }
-    return {createGameboard, gameController};
+    let matrix
+    function createGameboard(){//Creating a gameboard
+        const rows = 3;
+        const cols = 3;
+        matrix = Array.from({ length: rows }, () => Array(cols).fill(0));
+        return { matrix,rows };
+    }
+    function gameController(player,i,j) {
+        const {sm}=player;
+        matrix[i][j]=sm;
+    }
+    return {createGameboard, gameController};
 })();
 const board = mom.createGameboard();
 board.matrix.forEach(row => {
-    console.log(row.join(" "));
+    console.log(row.join(" "));
 });
 
 console.log("START THE GAME!!");
@@ -32,7 +31,11 @@ const P1=playerInput();
 // const P2=playerInput();
 
 console.log(P1.sm);
+let input=prompt("Enter the co-ords");
+let [i,j]=input.split(" ");
+mom.gameController(P1,i,j);
+
 
 board.matrix.forEach(row => {
-    console.log(row.join(" "));
+    console.log(row.join(" "));
 });
