@@ -1,0 +1,9 @@
+#dispgrid{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+}
+.disp{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+}
