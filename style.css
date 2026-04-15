@@ -1,8 +1,20 @@
+#dispControl{
+    display: flex;
+    justify-content: space-between;
+}
+#SeniorGrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #dispgrid{
     display: grid;
-    grid-template-columns: repeat(3,100px);
+    grid-template-columns: repeat(3,100px);;
 }
 .disp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100px;
     width: 100px;
     border: 2px solid black;
