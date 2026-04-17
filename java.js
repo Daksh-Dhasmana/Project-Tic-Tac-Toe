@@ -1,5 +1,6 @@
 const res=document.getElementById("dispRes");
 const cls=document.getElementById("dispgrid");
+const reset=document.getElementById("reset");
 let turn=1;
 function playerInput(nm,sm){// A constructor for Player object
     return {nm,sm}
